@@ -67,6 +67,7 @@ function mySort(&$array, $callback = '') {
             }
         }
     }
+
     return $array;
 }
 
@@ -111,6 +112,7 @@ function myReduce($array) {
     for($i = 0; $i < count($array); $i++) {
         $result += $array[$i];
     }
+
     return $result;
 }
 
@@ -124,6 +126,7 @@ function myIncludes($array, $target) {
             return true;
         }
     }
+
     return false;
 }
 
@@ -158,6 +161,7 @@ function checkIsAnagram($firstString, $secondString) {
             return false;
         }
     }
+
     return true;
 }
 
@@ -369,6 +373,7 @@ function getSumFromArray($array, $callback) {
             $result += $array[$i];
         }
     }
+
     return $result;
 }
 
@@ -419,6 +424,7 @@ function toBinary($number) {
     for ($i = count($numbersArray) - 1; $i >= 0; $i--){
         $result .= $numbersArray[$i];
     }
+
     return $result;
 }
 
@@ -495,6 +501,7 @@ function getSumFromSegmentOfNumbers($min, $max, $callback) {
             $result += $i;
         }
     }
+
     return $result;
 }
 
@@ -520,6 +527,7 @@ function takeAverageArrayElements($array, $callback) {
     }
 
     $filteredArray = myFilter($array, $callback);
+
     return myReduce($filteredArray) / count($filteredArray);
 }
 
@@ -809,5 +817,6 @@ function bitwiseNotEasy($number) {
     if(gettype($number) !== 'integer') {
         throw new Exception('Incorrect operator type. Use integer');
     }
+
     return $number ^ (-1);
 }
